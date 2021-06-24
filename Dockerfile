@@ -32,6 +32,12 @@ ADD /hadoop-3.2.1.tar.gz /home/hadoop
 RUN mv /home/hadoop/hadoop-3.2.1 /home/hadoop/hadoop
 RUN chown hadoop -R /home/hadoop/
 
+# Adding Configuration files for Hadoop
+ADD Config/core-site.xml /home/hadoop/hadoop/etc/hadoop/core-site.xml
+ADD Config/hdfs-site.xml /home/hadoop/hadoop/etc/hadoop/hdfs-site.xml
+ADD Config/mapred-site.xml /home/hadoop/hadoop/etc/hadoop/mapred-site.xml
+ADD Config/yarn-site.xml /home/hadoop/hadoop/etc/hadoop/yarn-site.xml
+
 # Set the Environment variables in hadoop-env.sh file
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> /home/hadoop/hadoop/etc/hadoop/hadoop-env.sh
 RUN echo "export HADOOP_HOME=/home/hadoop/hadoop" >> /home/hadoop/hadoop/etc/hadoop/hadoop-env.sh

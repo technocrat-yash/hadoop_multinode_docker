@@ -7,11 +7,11 @@
     </property>
     <property>
             <name>dfs.namenode.name.dir</name>
-            <value>/usr/local/hadoop/data/nameNode</value>
+            <value>/home/hadoop/hadoop/data/nameNode</value>
     </property>
     <property>
             <name>dfs.datanode.data.dir</name>
-            <value>/usr/local/hadoop/data/dataNode</value>
+            <value>/home/hadoop/hadoop/data/dataNode</value>
     </property>
     <property>
         <name>dfs.datanode.max.transfer.threads</name>
@@ -19,7 +19,7 @@
     </property>
     <property>
           <name>dfs.namenode.checkpoint.dir</name>
-          <value>/usr/local/hadoop/data/nameNodeSecondary</value>
+          <value>/home/hadoop/hadoop/data/nameNodeSecondary</value>
     </property>
     <property>
         <name>dfs.namenode.http-address</name>

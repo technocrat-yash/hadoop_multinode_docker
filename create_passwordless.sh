@@ -9,9 +9,11 @@ do
         if [ $i == 0 ]
         then
                 i=1
+                ssh-keygen -f "/root/.ssh/known_hosts" -R $server_ip
                 ./keygen_authorize.sh $server_ip $username $password
         else
                 master_ip=`cat server_list | head -1`
+                ssh-keygen -f "/root/.ssh/known_hosts" -R $server_ip
                 ./keygen_authorize.sh $server_ip $username $password
                 ./copy_to_slaves.sh $master_ip $server_ip $username $password
         fi
